@@ -3,9 +3,9 @@
 #include "matrix.hh"
 #include "vector.hh"
 /*!
- * \brief Kalasa opisujaca prostopadloscian
+ * \brief Kalasa opisujaca bryle
  *
- *nieniejsza klasa zawiera metody oraz paremetry potrzebne do opisu prostopadloscianu
+ *nieniejsza klasa zawiera metody oraz paremetry potrzebne do opisu bryly
  */
 
 class  bryla{
@@ -15,7 +15,7 @@ int SIZE;
    std::vector<Vector<3>> point;
    std::string nazwa;
    public:
-   
+   Vector<3> get_srodek(){return srodek;}
 
 const   Vector<3> &operator [] (int index) const;
   Vector<3> &operator [] (int index) ;
@@ -46,27 +46,27 @@ void bryla::rot(Matrix<3> mac)
 
 
 /*!
- *  Funktor prostopadloscianu.                                                                                                                      
+ *  Funktor bryla.                                                                                                                      
  * \param[in] index - index wektora.                                                                                                             
- * \retval Wartosc prostopadloscianu w danym miejscu tablicy.                              
+ * \retval Wartosc Bryly w danym miejscu tablicy.                              
  */
 const   Vector<3> & bryla::operator [] (int index) const
 {
     return point[index];
 }
 /*!
- *  Funktor prostopadloscianu.                                                                                                                      
+ *  Funktor Bryly.                                                                                                                      
  * \param[in] index - index wektora.                                                                                                             
- * \retval Wartosc prostopadloscianu w danym miejscu tablicy.                              
+ * \retval Wartosc Bryly w danym miejscu tablicy.                              
  */
   Vector<3> & bryla::operator [] (int index) 
 {
 return point[index];
 }
 /*!
-*  Realizuje dodawanie Wektora do prostopadloscianu.                                                                      
+*  Realizuje dodawanie Wektora do Bryly.                                                                      
  * \param[in]  move- drugi skladnik dodawania.                                         
-  * \retval    Sume dwoch skladnikow wierzcholkow prostopadloscianu i wektora                                                                             
+  * \retval    Sume dwoch skladnikow wierzcholkow Bryly i wektora                                                                             
  */
  bryla  bryla::operator + (  Vector<3> move)
 {
@@ -80,10 +80,10 @@ return point[index];
 }
 
 /*!
-*  funkcja przesowajaca prostopadloscian o dany wektor                                                                  
+*  funkcja przesowajaca Bryla o dany wektor                                                                  
  * \param[in]  move- wektor translacjia.   
- * \param this - prostopadloscian                                     
-  * \retval   prostopadloscian po przesunueciu                                                                          
+ * \param this - Bryla                                     
+  * \retval   Bryla po przesunueciu                                                                          
  */
 void  bryla::move_r(  Vector<3> move)
 {

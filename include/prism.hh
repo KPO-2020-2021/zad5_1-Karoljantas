@@ -11,7 +11,11 @@ class  prism: public bryla
    public:
     prism(){};
     prism(  Vector<3> pkt0, double wysokosc, double szerokosc, double dlugosc, std::string nazwa);
-
+/*!
+ * Funkcja opisujaca zapis                                                          |
+ *  Argumenty:                                                                |
+ *                                                |
+ */
 bool Zapis()
 {
   std::ofstream  StrmPlikowy;

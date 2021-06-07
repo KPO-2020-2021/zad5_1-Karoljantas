@@ -12,6 +12,17 @@ class  Powierzchnia
    std::vector<Vector<3>> point;
    std::string nazwa;
    public:
+   /*!
+ * konstruktor powierzcni.                                                         |
+ *  Argumenty:                                                                |
+ *                                                |
+ *     \param [in]        dlugosc - dlugosc                        |
+ *     \param [in]        szeroksc - szeroksc                        |
+ *     \param [in]        glebokosc - glebokosc                        |
+ *     \param [in]        nazwa - nazwa pliku                        |
+ */
+
+
 
     Powierzchnia( double dlugosc,double szeroksc,double glebokosc, std::string nazwa)
     {
@@ -31,7 +42,11 @@ class  Powierzchnia
         SIZE_Y++;
     }
     }
-
+/*!
+ * Funkcja opisujaca zapis                                                          |
+ *  Argumenty:                                                                |
+ *                                                |
+ */
 bool Zapis()
 {
   std::ofstream  StrmPlikowy;

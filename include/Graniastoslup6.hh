@@ -11,7 +11,11 @@ class  Graniastoslup6: public bryla
    public:
     Graniastoslup6(){};
     Graniastoslup6(  Vector<3> srodek,double promien, std::string nazwa);
-
+/*!
+ * Funkcja opisujaca zapis                                                          |
+ *  Argumenty:                                                                |
+ *                                                |
+ */
 bool Zapis()
 {
   std::ofstream  StrmPlikowy;
